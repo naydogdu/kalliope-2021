@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalliopé vous souhaite une belle année 2021</title>
+    <meta name="description" content="">
+    
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
+</head>
+<body class="font-serif bg-light">
+    <header class="flex fixed">
+        <!-- LANG -->
+        
+        <!-- CREDITS -->
+        
+    </header>
+    <main>
+        <div id="content" class="overflow-y-auto h-screen scroll-snap-y">
+            
+            <!-- INTRO -->
+            <article class="min-h-screen p-16 italic text-lg flex flex-col items-center justify-center scroll-snap-start">
+                <header class="flex flex-col items-center justify-center">
+                    <picture class="block mb-16">
+                        <source srcset="/assets/img/logo.png 1x, /assets/img/logo@2x.png 2x">
+                        <img class="" src="/assets/img/logo.png" alt="">
+                    </picture>
+                    <h1 class="text-xl tracking-tight text-center">
+                        Kalliopé vous souhaite une belle année 2021
+                    </h1>
+                </header>
+                <div class="my-12 text-center">
+                    <p>
+                        Et vous remercie de votre confiance et vous invite à découvrir un Paris inédit et hors du temps, photographié en mars 2020.
+                    </p>
+                </div>
+                <blockquote class="text-center">
+                    <p>“La beauté échappe aux modes passagères”</p>
+                    <cite class="text-base">Robert Doisneau</cite>
+                </blockquote>
+            </article>
+            
+            <!-- PICTURES -->
+            <div class="relative flex flex-col max-h-screen p-16 scroll-snap-start">
+                <div class="relative overflow-hidden flex flex-col justify-center w-full">
+                    <div class="relative pb-2/3 w-full overflow-hidden">
+                        <div id="slider"
+                             class="inset-0 absolute"
+                             data-images='[
+                                "/pictures/4.webp",
+                                "/pictures/6.webp",
+                                "/pictures/5.webp",
+                                "/pictures/3.webp",
+                                "/pictures/1.webp",
+                                "/pictures/2.webp"
+                             ]'
+                        >
+                            <!-- add canvas with class="w-full h-full object-cover object-center" -->
+                        </div>
+                    </div>
+                    <span class="transform -rotate-90 origin-bottom-left text-xs text-white absolute bottom-4 left-6">
+                        © Saig de Quénetain
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/assets/js/three.js"></script>
+    <script src="/assets/js/dat-gui.js"></script>
+    <script src="/assets/js/gsap.js"></script>
+    <script src="/assets/js/sketch.js"></script>
+    <script src="/assets/js/effect.js"></script>
+</body>
+</html>

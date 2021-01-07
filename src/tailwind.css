@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Juana';
+        src: url('/assets/fonts/JuanaRegularIt.woff2') format('woff2'),
+             url('/assets/fonts/JuanaRegularIt.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Juana';
+        src: url('/assets/fonts/JuanaRegular.woff2') format('woff2'),
+             url('/assets/fonts/JuanaRegular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@layer utilities {
+    .scroll-snap-x {
+        scroll-snap-type: x mandatory;
+    }
+    .scroll-snap-y {
+        scroll-snap-type: y mandatory;
+    }
+    .scroll-snap-x-proximity {
+        scroll-snap-type: x proximity;
+    }
+    .scroll-snap-y-proximity {
+        scroll-snap-type: y proximity;
+    }
+    .scroll-snap-start {
+        scroll-snap-align: start;
+    }
+    .scroll-snap-center {
+        scroll-snap-align: center;
+    }
+    .scroll-snap-end {
+        scroll-snap-align: end;
+    }
+}
