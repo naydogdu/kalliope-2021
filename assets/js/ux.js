@@ -44,15 +44,22 @@ uxjs.scroller = {
 
         var scrollZone = document.querySelector( '#scroller' );
         var slider = document.querySelector( '#slider' );
+        var scrollerTrigger = document.querySelector( '#data-trigger-scroller' );
 
-        if ( ! scrollZone || ! slider ) {
+        if ( ! scrollZone || ! slider || ! scrollerTrigger ) {
             return false;
         }
 
         scrollZone.addEventListener( 'wheel', triggerIt, true );
         scrollZone.addEventListener( 'touchmove', triggerIt, true );
+        scrollerTrigger.addEventListener( 'click', triggerAndScrollIt, true );
 
         function triggerIt() {
+            scrollZone.click();
+        }
+
+        function triggerAndScrollIt() {
+            scrollZone.scrollIntoView({behavior: "smooth"});
             scrollZone.click();
         }
     }
