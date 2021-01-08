@@ -550,6 +550,19 @@ video {
              url('/assets/fonts/GilroyBold.woff') format('woff');
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+#content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+#content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -696,10 +709,6 @@ video {
 
 .mb-10 {
   margin-bottom: 2.5rem;
-}
-
-.-ml-6 {
-  margin-left: -1.5rem;
 }
 
 .max-h-screen {
