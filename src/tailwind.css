@@ -9,7 +9,7 @@
              url('/assets/fonts/JuanaRegularIt.woff') format('woff');
         font-weight: normal;
         font-style: italic;
-        font-display: swap;
+        font-display: auto;
     }
 
     @font-face {
@@ -19,6 +19,15 @@
         font-weight: normal;
         font-style: normal;
         font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src: url('/assets/fonts/GilroyBold.woff2') format('woff2'),
+             url('/assets/fonts/GilroyBold.woff') format('woff');
     }
 }
 

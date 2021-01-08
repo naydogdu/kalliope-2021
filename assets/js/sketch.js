@@ -14,9 +14,9 @@ class Sketch {
     this.debug = opts.debug || false
     this.easing = opts.easing || 'easeInOut'
 
-    this.clicker = document.getElementById("content");
-
+    this.clicker = document.getElementById("scroller");
     this.container = document.getElementById("slider");
+
     this.images = JSON.parse(this.container.getAttribute('data-images'));
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
@@ -64,7 +64,7 @@ class Sketch {
   clickEvent(){
     this.clicker.addEventListener('click',()=>{
       this.next();
-    })
+    });
   }
   settings() {
     let that = this;
@@ -135,7 +135,7 @@ class Sketch {
         radius: { type: "f", value: 0 },
         texture1: { type: "f", value: this.textures[0] },
         texture2: { type: "f", value: this.textures[1] },
-        displacement: { type: "f", value: new THREE.TextureLoader().load('pictures/disp1.jpg') },
+        displacement: { type: "f", value: new THREE.TextureLoader().load('/pictures/disp1.jpg') },
         resolution: { type: "v4", value: new THREE.Vector4() },
       },
       // wireframe: true,

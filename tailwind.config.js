@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     screens: {
       md: '768px',
-      xl: '1536px',
+      lg: '1148px',
+      xl: '1486px',
+      'hmax-md': {'raw': '(max-height: 768px)'},
+      'hmax-sm': {'raw': '(max-height: 620px)'},
     },
     colors: {
       transparent: 'transparent',
@@ -17,6 +20,23 @@ module.exports = {
       light: '#EFE6E1',
     },
     fontFamily: {
+      sans: [
+        'Gilroy',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        '"Noto Sans"',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ],
       serif: ['Juana', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
     },
     fontSize: {
@@ -25,6 +45,8 @@ module.exports = {
       base: ['1.25rem', { lineHeight: '1.75rem' }],
       lg: ['2.5rem', { lineHeight: '1' }],
       xl: ['3.75rem', { lineHeight: '1' }],
+      smaller: '87.5%',
+      smallest: '68%',
     },
     letterSpacing: {
       tighter: '-0.025em',
@@ -36,10 +58,28 @@ module.exports = {
     padding: (theme) => ({
       ...theme('height')
     }),
-    extend: {},
+    extend: {
+      animation: {
+        leap: 'leap 1s ease-in-out infinite',
+      },
+      keyframes: {
+        leap: {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+            animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+          },
+          '50%': {
+            transform: 'translateY(5%)',
+            animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+          },
+        },
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }
