@@ -28,16 +28,16 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
 </head>
-<body class="antialiased font-serif bg-light">
+<body class="antialiased font-serif bg-light dark:bg-dark text-black dark:text-light">
     <main>
         <div id="content" class="overflow-y-auto h-screen scroll-snap-y">
 
             <!-- INTRO -->
             <article class="min-h-screen px-8 py-16 md:px-16 italic flex flex-col items-center justify-center scroll-snap-start">
-                <div class="pointer-events-none flex py-4 px-8 justify-between fixed z-50 top-0 w-full">
+                <div class="pointer-events-none flex p-4 justify-between fixed z-50 top-0 w-full">
                     
                     <!-- LANG -->
-                    <a class="pointer-events-auto w-8 h-8 hmax-md:w-10 hmax-md:h-10 leading-none flex items-center justify-center border-2 font-sans not-italic text-sm font-bold uppercase hover:text-dark hover:animate-pulse focus:text-dark focus:animate-pulse"
+                    <a class="pointer-events-auto w-8 h-8 hmax-md:w-10 hmax-md:h-10 leading-none flex items-center justify-center border-2 font-sans not-italic text-sm font-bold uppercase hover:text-dark hover:animate-pulse focus:text-dark focus:animate-pulse dark:hover:text-white dark:focus:text-white"
                        href="/"
                        title="Version française"
                     >
@@ -45,8 +45,8 @@
                     </a>
         
                     <!-- CREDITS -->
-                    <button class="pointer-events-auto hover:text-dark hover:animate-pulse focus:text-dark focus:animate-pulse" type="button" data-menu-toggle>
-                        <svg data-menu-toggle-open class="" xmlns="http://www.w3.org/2000/svg" width="45" height="25" viewBox="0 0 45 25"><g transform="translate(-1847 -19)"><rect class="a" width="31" height="5" transform="translate(1861 19)"/><rect class="a" width="37" height="5" transform="translate(1855 29)"/><rect class="a" width="45" height="5" transform="translate(1847 39)"/></g></svg>
+                    <button class="pointer-events-auto hover:text-dark hover:animate-pulse focus:text-dark focus:animate-pulse dark:hover:text-white dark:focus:text-white" type="button" data-menu-toggle>
+                        <svg data-menu-toggle-open class="fill-current" xmlns="http://www.w3.org/2000/svg" width="45" height="25" viewBox="0 0 45 25"><g transform="translate(-1847 -19)"><rect class="a" width="31" height="5" transform="translate(1861 19)"/><rect class="a" width="37" height="5" transform="translate(1855 29)"/><rect class="a" width="45" height="5" transform="translate(1847 39)"/></g></svg>
                     </button>
                 </div>
                 
@@ -54,6 +54,7 @@
                     
                     <!-- LOGO -->
                     <picture class="block mb-10 md:mb-16 hmax-md:mb-10">
+                        <source srcset="/assets/img/logo-white.png 1x, /assets/img/logo-white@2x.png 2x" media="(prefers-color-scheme: dark)">
                         <source srcset="/assets/img/logo.png 1x, /assets/img/logo@2x.png 2x">
                         <img class="w-32 md:w-48 hmax-md:w-32" src="/assets/img/logo.png" alt="">
                     </picture>
@@ -111,10 +112,15 @@
         </button>
     </div>
 
+    <!-- VIEWS COUNTER -->
+    <span id="views" class="font-sans fixed bottom-4 left-8 transform -rotate-90 origin-bottom-left">
+        0
+    </span>
+
     <!-- POP-IN -->
-    <div data-menu class="fixed bg-dark z-50 inset-0 h-screen overflow-y-auto hidden">
+    <div data-menu class="fixed bg-dark dark:bg-black z-50 inset-0 h-screen overflow-y-auto hidden">
         <svg data-menu-toggle-close
-             class="cursor-pointer absolute text-white fill-current right-12 top-6 hover:animate-pulse focus:animate-pulse"
+             class="cursor-pointer absolute text-white fill-current right-6 top-4 hover:animate-pulse focus:animate-pulse"
              xmlns="http://www.w3.org/2000/svg"
              width="26.082" height="26.676"
              viewBox="0 0 26.082 26.676"
@@ -156,5 +162,7 @@
     <script src="/assets/js/sketch.js"></script>
     <script src="/assets/js/effect.js"></script>
     <script src="/assets/js/ux.js"></script>
+    <script src="/assets/js/counter.js"></script>
+    <script async src="https://api.countapi.xyz/hit/en.kalliope-2021.com/visits?callback=cb"></script>
 </body>
 </html>

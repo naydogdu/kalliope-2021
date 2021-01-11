@@ -54,7 +54,8 @@ uxjs.scroller = {
         scrollZone.addEventListener( 'touchmove', triggerIt, true );
         scrollerTrigger.addEventListener( 'click', triggerAndScrollIt, true );
 
-        function triggerIt() {
+        function triggerIt(e) {
+            e.preventDefault();
             scrollZone.click();
         }
 
