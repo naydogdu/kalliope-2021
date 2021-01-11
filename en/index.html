@@ -53,11 +53,12 @@
                 <header class="flex flex-col items-center justify-center">
                     
                     <!-- LOGO -->
-                    <picture class="block mb-10 md:mb-16 hmax-md:mb-10">
-                        <source srcset="/assets/img/logo-white.png 1x, /assets/img/logo-white@2x.png 2x" media="(prefers-color-scheme: dark)">
-                        <source srcset="/assets/img/logo.png 1x, /assets/img/logo@2x.png 2x">
-                        <img class="w-32 md:w-48 hmax-md:w-32" src="/assets/img/logo.png" alt="">
-                    </picture>
+                    <a class="block mb-10 md:mb-16 hmax-md:mb-10 hover:animate-pulse" href="https://www.kalliope-law.com/en/" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source srcset="/assets/img/logo-kalliope-light.svg" media="(prefers-color-scheme: dark)">
+                            <img class="w-32 md:w-48 hmax-md:w-32" src="/assets/img/logo-kalliope.svg" alt="">
+                        </picture>
+                    </a>
                     
                     <!-- TITLE -->
                     <h1 class="text-lg md:text-xl tracking-tight text-center">
@@ -112,11 +113,22 @@
         </button>
     </div>
 
-    <!-- VIEWS COUNTER -->
-    <span id="views" class="font-sans fixed bottom-4 left-8 transform -rotate-90 origin-bottom-left">
-        0
-    </span>
+    <!-- VIEWS COUNTER
+    <span class="font-sans flex items-center space-x-2 fixed bottom-4 left-8 transform -rotate-90 origin-bottom-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.015 7c4.751 0 8.063 3.012 9.504 4.636-1.401 1.837-4.713 5.364-9.504 5.364-4.42 0-7.93-3.536-9.478-5.407 1.493-1.647 4.817-4.593 9.478-4.593zm0-2c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 3c-2.21 0-4 1.791-4 4s1.79 4 4 4c2.209 0 4-1.791 4-4s-1.791-4-4-4zm-.004 3.999c-.564.564-1.479.564-2.044 0s-.565-1.48 0-2.044c.564-.564 1.479-.564 2.044 0s.565 1.479 0 2.044z"/></svg>
+        <span id="views">0</span>
+    </span> -->
 
+    <!-- SLIDER NAV -->
+    <span id="slider-nav" data-current="0" class="font-sans flex items-center space-x-2 fixed bottom-4 right-9 transform rotate-90 origin-bottom-right">
+        <span class="border-2 w-2 h-2"></span>
+        <span class="border-2 w-2 h-2"></span>
+        <span class="border-2 w-2 h-2"></span>
+        <span class="border-2 w-2 h-2"></span>
+        <span class="border-2 w-2 h-2"></span>
+        <span class="border-2 w-2 h-2"></span>
+    </span>
+    
     <!-- POP-IN -->
     <div data-menu class="fixed bg-dark dark:bg-black z-50 inset-0 h-screen overflow-y-auto hidden">
         <svg data-menu-toggle-close
@@ -129,10 +141,12 @@
         </svg>
         <div class="flex flex-col items-center justify-center h-full w-full">
             <!-- LOGO -->
-            <picture class="block mb-8 md:mb-16 hmax-md:mb-8">
-                <source srcset="/assets/img/logo-white.png 1x, /assets/img/logo-white@2x.png 2x">
-                <img class="w-24 md:w-36 hmax-md:w-24" src="/assets/img/logo.png" alt="">
-            </picture>
+            <a class="block mb-8 md:mb-16 hmax-md:mb-8 hover:animate-pulse" href="https://www.kalliope-law.com/en/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="/assets/img/logo-kalliope-light-black.svg" media="(prefers-color-scheme: dark)">
+                    <img class="w-24 md:w-36 hmax-md:w-24" src="/assets/img/logo-kalliope-light.svg" alt="">
+                </picture>
+            </a>
             <div class="px-8 leading-relaxed text-white max-w-screen-md lg:px-24 text-center space-y-8">
                 <p>
                     Saig de Quénetain, photographer and creative director at Tactile agency, captured what we couldn’t see last March: the image of a Paris in suspended time. By his interpretation and his perception he reveals new perspectives to us and makes us rediscover the beauty and greatness of this world capital of arts and culture.
@@ -141,16 +155,13 @@
                     This series is the subject of a first book of photographs <br>
                     « Paris timeless » <br>
                     You can find it here:
-                    <a class="inline-flex items-center space-x-1 hover:underline"
+                    <a class="hover:underline"
                        href="https://www.atelier-tactile.fr"
                        target="_blank"
                        rel="noopener noreferrer"
                        title="Atelier-tactile.fr by Agence Tactile"
                     >
-                        <span>www.atelier-tactile.fr</span>
-                        <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                        www.atelier-tactile.fr
                     </a>
                 </p>
             </div>
@@ -162,7 +173,7 @@
     <script src="/assets/js/sketch.js"></script>
     <script src="/assets/js/effect.js"></script>
     <script src="/assets/js/ux.js"></script>
-    <script src="/assets/js/counter.js"></script>
-    <script async src="https://api.countapi.xyz/hit/en.kalliope-2021.com/visits?callback=cb"></script>
+    <!--<script src="/assets/js/counter.js"></script>
+    <script async src="https://api.countapi.xyz/hit/en.kalliope-2021.com/visits?callback=cb"></script>-->
 </body>
 </html>

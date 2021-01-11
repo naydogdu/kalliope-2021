@@ -162,6 +162,8 @@ class Sketch {
     this.isRunning = true;
     let len = this.textures.length;
     let nextTexture =this.textures[(this.current +1)%len];
+    let sliderNav = document.getElementById("slider-nav");
+    sliderNav.dataset.current = this.current + 1;
     this.material.uniforms.texture2.value = nextTexture;
     let tl = new TimelineMax();
     tl.to(this.material.uniforms.progress,this.duration,{
