@@ -64,7 +64,29 @@ uxjs.scroller = {
             scrollZone.click();
         }
     }
-}; // uxjs.nav
+}; // uxjs.scroller
+
+
+uxjs.domLoaded = {
+
+    init: function() {
+        this.removeSpinner();
+    },
+
+    /**
+     * Remove spinner
+     */
+    removeSpinner: function() {
+        var loader = document.querySelector( '#loader' );
+
+        if ( ! loader ) {
+            return false;
+        }
+
+        loader.classList.add("opacity-0");
+        //loader.style.display = "none";
+    }
+}; // uxjs.domLoaded
 
 /**
  * DOM ready ?
@@ -86,4 +108,5 @@ function isDomReady( fn ) {
 isDomReady( function() {
     uxjs.nav.init();
     uxjs.scroller.init();
+    uxjs.domLoaded.init();
 } );

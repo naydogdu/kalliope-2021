@@ -693,6 +693,10 @@ video {
   height: 2rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -779,6 +783,10 @@ video {
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .focus\:outline-none:focus {
@@ -904,6 +912,10 @@ video {
   fill: currentColor;
 }
 
+.stroke-current {
+  stroke: currentColor;
+}
+
 .text-center {
   text-align: center;
 }
@@ -911,6 +923,11 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgba(29, 29, 29, var(--tw-text-opacity));
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgba(57, 57, 57, var(--tw-text-opacity));
 }
 
 .text-white {
@@ -982,6 +999,10 @@ video {
   width: 3rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -992,6 +1013,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .z-50 {
@@ -1019,6 +1044,16 @@ video {
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
+}
+
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 @-webkit-keyframes spin {
@@ -1115,6 +1150,11 @@ video {
   }
 }
 
+.animate-pulse {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .animate-leap {
   -webkit-animation: leap 1s ease-in-out infinite;
           animation: leap 1s ease-in-out infinite;
@@ -1142,6 +1182,10 @@ video {
 @media (min-width: 768px) {
   .md\:block {
     display: block;
+  }
+
+  .md\:h-32 {
+    height: 8rem;
   }
 
   .md\:text-lg {
@@ -1174,6 +1218,10 @@ video {
 
   .md\:right-7 {
     right: 1.75rem;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
   }
 
   .md\:w-36 {

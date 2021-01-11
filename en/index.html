@@ -29,12 +29,71 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
 </head>
 <body class="antialiased font-serif bg-light dark:bg-dark text-black dark:text-light">
+    <div id="loader"
+         class="fixed z-50 inset-0 bg-light dark:bg-dark transition duration-300 flex items-center justify-center pointer-events-none"
+         data-hide="opacity-0"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            class="stroke-current text-dark dark:text-light w-16 h-16 md:w-32 md:h-32 animate-pulse"
+        >
+            <g fill="none" fill-rule="evenodd" stroke-width="2">
+                <circle cx="22" cy="22" r="1">
+                    <animate
+                        attributeName="r"
+                        begin="0s"
+                        calcMode="spline"
+                        dur="1.8s"
+                        keySplines="0.165, 0.84, 0.44, 1"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="1; 20"
+                    ></animate>
+                    <animate
+                        attributeName="stroke-opacity"
+                        begin="0s"
+                        calcMode="spline"
+                        dur="1.8s"
+                        keySplines="0.3, 0.61, 0.355, 1"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="1; 0"
+                    ></animate>
+                </circle>
+                <circle cx="22" cy="22" r="1">
+                    <animate
+                        attributeName="r"
+                        begin="-0.9s"
+                        calcMode="spline"
+                        dur="1.8s"
+                        keySplines="0.165, 0.84, 0.44, 1"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="1; 20"
+                    ></animate>
+                    <animate
+                        attributeName="stroke-opacity"
+                        begin="-0.9s"
+                        calcMode="spline"
+                        dur="1.8s"
+                        keySplines="0.3, 0.61, 0.355, 1"
+                        keyTimes="0; 1"
+                        repeatCount="indefinite"
+                        values="1; 0"
+                    ></animate>
+                </circle>
+            </g>
+        </svg>
+    </div>
     <main>
         <div id="content" class="overflow-y-auto h-screen scroll-snap-y">
 
             <!-- INTRO -->
             <article class="min-h-screen px-8 py-16 md:px-16 italic flex flex-col items-center justify-center scroll-snap-start">
-                <div class="pointer-events-none flex p-4 justify-between fixed z-50 top-0 w-full">
+                <div class="pointer-events-none flex p-4 justify-between fixed z-40 top-0 w-full">
                     
                     <!-- LANG -->
                     <a class="pointer-events-auto w-8 h-8 hmax-md:w-10 hmax-md:h-10 leading-none flex items-center justify-center border-2 font-sans not-italic text-sm font-bold uppercase hover:text-dark hover:animate-pulse focus:text-dark focus:animate-pulse dark:hover:text-white dark:focus:text-white"
@@ -85,12 +144,12 @@
                         <div id="slider"
                              class="inset-0 absolute"
                              data-images='[
-                                "/pictures/4.webp",
-                                "/pictures/6.webp",
-                                "/pictures/5.webp",
-                                "/pictures/3.webp",
-                                "/pictures/1.webp",
-                                "/pictures/2.webp"
+                                "/pictures/4.jpg",
+                                "/pictures/6.jpg",
+                                "/pictures/5.jpg",
+                                "/pictures/3.jpg",
+                                "/pictures/1.jpg",
+                                "/pictures/2.jpg"
                              ]'
                         >
                             <!-- add canvas with class="w-full h-full object-cover object-center" -->
@@ -133,7 +192,7 @@
     </span>
     
     <!-- POP-IN -->
-    <div data-menu class="fixed bg-dark dark:bg-black z-50 inset-0 h-screen overflow-y-auto hidden">
+    <div data-menu class="fixed bg-dark dark:bg-black z-40 inset-0 h-screen overflow-y-auto hidden">
         <svg data-menu-toggle-close
              class="cursor-pointer absolute text-white fill-current right-6 top-4 hover:animate-pulse focus:animate-pulse"
              xmlns="http://www.w3.org/2000/svg"
