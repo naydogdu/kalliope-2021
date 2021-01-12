@@ -33,60 +33,7 @@
          class="fixed z-50 inset-0 bg-light dark:bg-dark transition duration-300 flex items-center justify-center pointer-events-none"
          data-hide="opacity-0"
     >
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="44"
-            height="44"
-            viewBox="0 0 44 44"
-            class="stroke-current text-dark dark:text-light w-16 h-16 md:w-32 md:h-32 animate-pulse"
-        >
-            <g fill="none" fill-rule="evenodd" stroke-width="2">
-                <circle cx="22" cy="22" r="1">
-                    <animate
-                        attributeName="r"
-                        begin="0s"
-                        calcMode="spline"
-                        dur="1.8s"
-                        keySplines="0.165, 0.84, 0.44, 1"
-                        keyTimes="0; 1"
-                        repeatCount="indefinite"
-                        values="1; 20"
-                    ></animate>
-                    <animate
-                        attributeName="stroke-opacity"
-                        begin="0s"
-                        calcMode="spline"
-                        dur="1.8s"
-                        keySplines="0.3, 0.61, 0.355, 1"
-                        keyTimes="0; 1"
-                        repeatCount="indefinite"
-                        values="1; 0"
-                    ></animate>
-                </circle>
-                <circle cx="22" cy="22" r="1">
-                    <animate
-                        attributeName="r"
-                        begin="-0.9s"
-                        calcMode="spline"
-                        dur="1.8s"
-                        keySplines="0.165, 0.84, 0.44, 1"
-                        keyTimes="0; 1"
-                        repeatCount="indefinite"
-                        values="1; 20"
-                    ></animate>
-                    <animate
-                        attributeName="stroke-opacity"
-                        begin="-0.9s"
-                        calcMode="spline"
-                        dur="1.8s"
-                        keySplines="0.3, 0.61, 0.355, 1"
-                        keyTimes="0; 1"
-                        repeatCount="indefinite"
-                        values="1; 0"
-                    ></animate>
-                </circle>
-            </g>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" class="stroke-current text-dark dark:text-light w-16 h-16 md:w-32 md:h-32 animate-pulse" > <g fill="none" fill-rule="evenodd" stroke-width="2"> <circle cx="22" cy="22" r="1"> <animate attributeName="r" begin="0s" calcMode="spline" dur="1.8s" keySplines="0.165, 0.84, 0.44, 1" keyTimes="0; 1" repeatCount="indefinite" values="1; 20" ></animate> <animate attributeName="stroke-opacity" begin="0s" calcMode="spline" dur="1.8s" keySplines="0.3, 0.61, 0.355, 1" keyTimes="0; 1" repeatCount="indefinite" values="1; 0" ></animate> </circle> <circle cx="22" cy="22" r="1"> <animate attributeName="r" begin="-0.9s" calcMode="spline" dur="1.8s" keySplines="0.165, 0.84, 0.44, 1" keyTimes="0; 1" repeatCount="indefinite" values="1; 20" ></animate> <animate attributeName="stroke-opacity" begin="-0.9s" calcMode="spline" dur="1.8s" keySplines="0.3, 0.61, 0.355, 1" keyTimes="0; 1" repeatCount="indefinite" values="1; 0" ></animate> </circle> </g> </svg>
     </div>
     <main>
         <div id="content" class="overflow-y-auto h-screen scroll-snap-y">
@@ -136,24 +83,27 @@
                     <cite class="text-base">Robert Doisneau</cite>
                 </blockquote>
             </article>
-            
+    
             <!-- PICTURES -->
-            <div class="relative flex flex-col max-h-screen scroll-snap-start px-8 pb-20 pt-8 md:pt-16 md:px-16">
-                <div id="scroller" class="relative overflow-hidden flex flex-col justify-center w-full max-w-screen-xl mx-auto">
-                    <div class="relative pb-2/3 w-full overflow-hidden">
-                        <div id="slider"
-                             class="inset-0 absolute"
-                             data-images='[
-                                "/pictures/4.jpg",
-                                "/pictures/6.jpg",
-                                "/pictures/5.jpg",
-                                "/pictures/3.jpg",
-                                "/pictures/1.jpg",
-                                "/pictures/2.jpg"
-                             ]'
-                        >
-                            <!-- add canvas with class="w-full h-full object-cover object-center" -->
-                        </div>
+            <div class="relative flex flex-col items-center md:h-screen scroll-snap-start px-8 py-20 md:pt-16 md:px-16">
+                <div id="scroller" class="h-full max-w-full relative">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         height="1200"
+                         width="1800"
+                         class="mx-auto w-full h-auto md:h-full md:w-auto object-contain object-center"
+                    />
+                    <div id="slider"
+                         class="inset-0 absolute"
+                         data-images='[
+                            "/pictures/paris-hors-du-temps-opera.jpg",
+                            "/pictures/paris-hors-du-temps-montmartre.jpg",
+                            "/pictures/paris-hors-du-temps-champs-elysees.jpg",
+                            "/pictures/paris-hors-du-temps-place-vendome.jpg",
+                            "/pictures/paris-hors-du-temps-tour-eiffel.jpg",
+                            "/pictures/paris-hors-du-temps-place-concorde.jpg"
+                         ]'
+                    >
+                        <!-- add canvas with class="w-full h-full object-cover object-center" -->
                     </div>
                     <span class="transform -rotate-90 origin-bottom-left text-xs text-white absolute bottom-4 left-6">
                         © Saig de Quénetain

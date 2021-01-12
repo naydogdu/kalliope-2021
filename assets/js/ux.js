@@ -54,6 +54,9 @@ uxjs.scroller = {
         scrollZone.addEventListener( 'touchmove', triggerIt, true );
         scrollerTrigger.addEventListener( 'click', triggerAndScrollIt, true );
 
+        /* remove right click on images... */
+        slider.addEventListener('contextmenu', event => event.preventDefault());
+
         function triggerIt(e) {
             e.preventDefault();
             scrollZone.click();
