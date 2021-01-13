@@ -52,6 +52,9 @@ class Sketch {
     this.images.forEach((url,i)=>{
       let promise = new Promise(resolve => {
         that.textures[i] = new THREE.TextureLoader().load( url, resolve );
+        that.textures[i].generateMipmaps = false;
+        that.textures[i].minFilter = THREE.LinearFilter;
+        that.textures[i].needsUpdate = true;
       });
       promises.push(promise);
     })

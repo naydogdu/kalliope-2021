@@ -86,8 +86,11 @@ uxjs.domLoaded = {
             return false;
         }
 
-        loader.classList.add("opacity-0");
-        //loader.style.display = "none";
+        window.addEventListener('load', handleRemove);
+
+        function handleRemove() {
+            loader.classList.add("opacity-0");
+        }
     }
 }; // uxjs.domLoaded
 
